@@ -84,7 +84,7 @@ public struct CalendarMonth: Hashable, Equatable, Comparable, Sendable, Codable,
     
     /// Date instance for the 1st of the month.
     public var startDate: Date {
-        var calendar = Calendar(identifier: .gregorian)
+        let calendar = Calendar(identifier: .gregorian)
         var components = DateComponents()
         components.year = year
         components.month = month

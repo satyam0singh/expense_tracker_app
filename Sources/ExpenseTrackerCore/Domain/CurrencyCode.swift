@@ -17,6 +17,15 @@ public struct CurrencyCode: Hashable, Equatable, Sendable, Codable, CustomString
         return code
     }
     
+    /// Multiplier factor from major units to minor units (e.g. 100 for 2 decimal places, 1 for 0).
+    public var minorUnitsFactor: Int {
+        var res = 1
+        for _ in 0..<minorUnitExponent {
+            res *= 10
+        }
+        return res
+    }
+    
     // Default currency: Indian Rupee (INR) per docs/00_PRODUCT_BRAIN.md and ADR-003
     public static let inr = CurrencyCode(code: "INR", symbol: "₹", minorUnitExponent: 2)
     public static let usd = CurrencyCode(code: "USD", symbol: "$", minorUnitExponent: 2)

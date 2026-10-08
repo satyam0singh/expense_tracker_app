@@ -8,14 +8,14 @@ final class LogExpenseIntentTests: XCTestCase {
         try FileManager.default.createDirectory(at: tempDir, withIntermediateDirectories: true)
         defer { try? FileManager.default.removeItem(at: tempDir) }
         
-        let fileStore = LocalFileStore(directoryURL: tempDir)
+        let fileStore = LocalFileStore(baseDirectory: tempDir)
         let txRepo = LocalTransactionRepository(store: fileStore)
         let catRepo = LocalCategoryRepository(store: fileStore)
         let profile = UserProfile(defaultCurrencyCode: "USD")
         
         // Seed categories
         let foodCat = Category(name: "Food & Dining", iconName: "fork.knife", colorHex: "#FF9500")
-        try await catRepo.save(foodCat)
+        _ = try await catRepo.create(category: foodCat)
         
         let result = try await LogExpenseIntentHandler.handle(
             amountMajor: 24.50,
@@ -49,7 +49,7 @@ final class LogExpenseIntentTests: XCTestCase {
         try FileManager.default.createDirectory(at: tempDir, withIntermediateDirectories: true)
         defer { try? FileManager.default.removeItem(at: tempDir) }
         
-        let fileStore = LocalFileStore(directoryURL: tempDir)
+        let fileStore = LocalFileStore(baseDirectory: tempDir)
         let txRepo = LocalTransactionRepository(store: fileStore)
         let catRepo = LocalCategoryRepository(store: fileStore)
         let profile = UserProfile(defaultCurrencyCode: "INR")
@@ -88,7 +88,7 @@ final class LogExpenseIntentTests: XCTestCase {
         try FileManager.default.createDirectory(at: tempDir, withIntermediateDirectories: true)
         defer { try? FileManager.default.removeItem(at: tempDir) }
         
-        let fileStore = LocalFileStore(directoryURL: tempDir)
+        let fileStore = LocalFileStore(baseDirectory: tempDir)
         let txRepo = LocalTransactionRepository(store: fileStore)
         let catRepo = LocalCategoryRepository(store: fileStore)
         let widgetStore = WidgetDataStore(appGroupIdentifier: nil, fallbackDirectoryURL: tempDir)

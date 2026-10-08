@@ -122,8 +122,7 @@ public enum LogExpenseIntentHandler {
             recurringRuleId: nil
         )
         
-        let transaction = try draft.validate()
-        try await transactionRepository.save(transaction)
+        let transaction = try await transactionRepository.add(draft: draft)
         
         // 6. Refresh Widget Snapshot if data store is provided
         if let store = widgetDataStore {
