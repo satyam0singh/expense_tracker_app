@@ -112,7 +112,7 @@ final class BudgetFeatureTests: XCTestCase {
             budgetLimitMinor: budgetLimitMinor,
             transactions: [Transaction(type: .expense, amountMinor: 1100000, transactionDay: "2026-10-05")]
         )
-        XCTAssertEqual(summary110.budgetUsedPercent, 110.0)
+        XCTAssertEqual(try XCTUnwrap(summary110.budgetUsedPercent), 110.0, accuracy: 0.001)
         XCTAssertTrue(summary110.isOverBudget)
         XCTAssertEqual(summary110.budgetRemaining?.amountMinor, -100000) // -₹1,000
     }

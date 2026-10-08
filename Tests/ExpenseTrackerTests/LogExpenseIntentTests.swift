@@ -19,7 +19,7 @@ final class LogExpenseIntentTests: XCTestCase {
         
         let result = try await LogExpenseIntentHandler.handle(
             amountMajor: 24.50,
-            categoryName: "food",
+            categoryName: "Food & Dining",
             note: "Coffee and sandwich",
             paymentMethodName: "Credit Card",
             transactionDay: "2026-10-08",

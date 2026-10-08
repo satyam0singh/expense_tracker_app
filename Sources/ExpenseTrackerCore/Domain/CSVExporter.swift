@@ -118,7 +118,7 @@ public enum CSVExporter {
     /// If the field contains a comma, quote, or newline (CR/LF), it is enclosed in double quotes,
     /// and any internal double quotes are escaped by doubling them ("").
     public static func escapeField(_ value: String) -> String {
-        let needsQuoting = value.contains(",") || value.contains("\"") || value.contains("\n") || value.contains("\r")
+        let needsQuoting = value.contains(",") || value.contains("\"") || value.contains(where: { $0.isNewline })
         if needsQuoting {
             let escaped = value.replacingOccurrences(of: "\"", with: "\"\"")
             return "\"\(escaped)\""

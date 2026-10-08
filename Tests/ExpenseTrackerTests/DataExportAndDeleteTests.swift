@@ -68,7 +68,7 @@ final class DataExportAndDeleteTests: XCTestCase {
         // tx1 row should have escaped merchant and note
         XCTAssertTrue(csv.contains("2026-10-05,Expense,250.00,INR,Food & Dining,\"Haldiram's, CP\",\"Lunch with \"\"colleagues\"\"\",UPI"))
         // tx2 row
-        XCTAssertTrue(csv.contains("2026-10-01,Income,75000.00,INR,Uncategorized,Employer Ltd,October Salary,BANKTRANSFER"))
+        XCTAssertTrue(csv.contains("2026-10-01,Income,75000.00,INR,Uncategorized,Employer Ltd,October Salary,BANK_TRANSFER"))
         
         // Verify UTF-8 data generation
         let data = CSVExporter.generateCSVData(transactions: [tx1, tx2], categoryNames: catMap)

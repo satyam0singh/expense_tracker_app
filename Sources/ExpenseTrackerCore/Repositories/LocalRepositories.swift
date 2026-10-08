@@ -125,8 +125,23 @@ public final class LocalTransactionRepository: TransactionRepositoryProtocol {
         guard let index = all.firstIndex(where: { $0.id == id && !$0.isDeleted }) else {
             throw ValidationError.missingRequiredField("Active transaction \(id) not found")
         }
-        var updated = validated
-        updated.updatedAt = Date()
+        let original = all[index]
+        let updated = Transaction(
+            id: original.id,
+            type: validated.type,
+            amountMinor: validated.amountMinor,
+            currencyCode: validated.currencyCode,
+            categoryId: validated.categoryId,
+            categoryNameSnapshot: validated.categoryNameSnapshot,
+            merchant: validated.merchant,
+            note: validated.note,
+            transactionDay: validated.transactionDay,
+            paymentMethod: validated.paymentMethod,
+            source: validated.source,
+            recurringRuleId: validated.recurringRuleId,
+            createdAt: original.createdAt,
+            updatedAt: Date()
+        )
         all[index] = updated
         try await store.save(all, filename: filename)
         return updated
