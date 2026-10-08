@@ -5,8 +5,8 @@ final class WidgetSnapshotTests: XCTestCase {
     
     func testWidgetSnapshotCalculationFromTransactionsAndBudget() {
         let profile = UserProfile(
-            monthlyBudgetLimitMinor: 500000, // ₹5,000.00
             defaultCurrencyCode: "INR",
+            monthlyBudgetLimitMinor: 500000, // ₹5,000.00
             payCycleStartDay: 1
         )
         
@@ -63,8 +63,8 @@ final class WidgetSnapshotTests: XCTestCase {
     
     func testWidgetSnapshotOverBudget() {
         let profile = UserProfile(
-            monthlyBudgetLimitMinor: 100000, // ₹1,000.00
-            defaultCurrencyCode: "INR"
+            defaultCurrencyCode: "INR",
+            monthlyBudgetLimitMinor: 100000 // ₹1,000.00
         )
         let month = CalendarMonth(year: 2026, month: 10)
         let budget = Budget(month: month, limitMinor: 100000, currencyCode: "INR")

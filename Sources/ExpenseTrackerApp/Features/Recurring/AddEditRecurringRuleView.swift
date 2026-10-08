@@ -87,9 +87,9 @@ public struct AddEditRecurringRuleView: View {
                 Section(header: Text("Category & Payment")) {
                     Picker("Category", selection: $selectedCategoryId) {
                         Text("Uncategorized").tag(UUID?.none)
-                        ForEach(categories.filter { $0.type == type }) { cat in
+                        ForEach(categories) { cat in
                             HStack {
-                                Image(systemName: cat.iconName)
+                                Image(systemName: cat.iconKey)
                                 Text(cat.name)
                             }
                             .tag(Optional(cat.id))

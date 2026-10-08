@@ -132,17 +132,17 @@ final class DataExportAndDeleteTests: XCTestCase {
         )
         
         let draft = TransactionDraft(
+            type: .expense,
             amountMinor: 5000,
             currencyCode: "EUR",
-            type: .expense,
             transactionDay: "2026-10-08"
         )
         _ = try await txRepo.add(draft: draft)
         
-        let customCat = Category(name: "Gadgets", iconName: "laptopcomputer", colorHex: "#34C759", type: .expense)
+        let customCat = Category(name: "Gadgets", iconKey: "laptopcomputer")
         _ = try await catRepo.create(category: customCat)
         
-        let budget = Budget(month: CalendarMonth(year: 2026, month: 10), overallLimitMinor: 200000, currencyCode: "EUR")
+        let budget = Budget(month: CalendarMonth(year: 2026, month: 10), limitMinor: 200000, currencyCode: "EUR")
         try await budgetRepo.save(budget: budget)
         
         // Verify records exist

@@ -14,7 +14,7 @@ final class LogExpenseIntentTests: XCTestCase {
         let profile = UserProfile(defaultCurrencyCode: "USD")
         
         // Seed categories
-        let foodCat = Category(name: "Food & Dining", iconName: "fork.knife", colorHex: "#FF9500")
+        let foodCat = Category(name: "Food & Dining", iconKey: "fork.knife")
         _ = try await catRepo.create(category: foodCat)
         
         let result = try await LogExpenseIntentHandler.handle(
@@ -92,7 +92,7 @@ final class LogExpenseIntentTests: XCTestCase {
         let txRepo = LocalTransactionRepository(store: fileStore)
         let catRepo = LocalCategoryRepository(store: fileStore)
         let widgetStore = WidgetDataStore(appGroupIdentifier: nil, fallbackDirectoryURL: tempDir)
-        let profile = UserProfile(monthlyBudgetLimitMinor: 500000, defaultCurrencyCode: "INR")
+        let profile = UserProfile(defaultCurrencyCode: "INR", monthlyBudgetLimitMinor: 500000)
         
         _ = try await LogExpenseIntentHandler.handle(
             amountMajor: 150.0,

@@ -8,7 +8,7 @@ final class TrendsCalculationTests: XCTestCase {
         let currentMonth = CalendarMonth(year: 2026, month: 10)
         let prevMonth = CalendarMonth(year: 2026, month: 9)
         
-        let catFood = Category(name: "Food", iconName: "fork.knife", colorHex: "#FF9500", type: .expense)
+        let catFood = Category(name: "Food", iconKey: "fork.knife")
         
         // October transactions: 500.00 expense, 50.00 refund -> net 450.00 (45000 minor)
         let txOct1 = Transaction(type: .expense, amountMinor: 50000, currencyCode: "INR", categoryId: catFood.id, transactionDay: "2026-10-05")
@@ -37,9 +37,9 @@ final class TrendsCalculationTests: XCTestCase {
         let currency = CurrencyCode.inr
         let currentMonth = CalendarMonth(year: 2026, month: 10)
         
-        let catA = Category(name: "Groceries", iconName: "cart", colorHex: "#34C759", type: .expense)
-        let catB = Category(name: "Dining", iconName: "fork.knife", colorHex: "#FF9500", type: .expense)
-        let catC = Category(name: "Travel", iconName: "airplane", colorHex: "#007AFF", type: .expense)
+        let catA = Category(name: "Groceries", iconKey: "cart")
+        let catB = Category(name: "Dining", iconKey: "fork.knife")
+        let catC = Category(name: "Travel", iconKey: "airplane")
         
         // October: Groceries 300, Dining 150, Travel 50
         let octTxs = [
@@ -63,32 +63,38 @@ final class TrendsCalculationTests: XCTestCase {
         )
         
         // Groceries: 30000 vs 20000 -> +10000 (+50%)
-        let grocTrend = trends.categoryTrends.first { $0.categoryId == catA.id }
-        XCTAssertNotNil(grocTrend)
-        XCTAssertEqual(grocTrend?.deltaMinor, 10000)
-        XCTAssertEqual(grocTrend?.direction, .increased)
-        XCTAssertEqual(grocTrend?.percentageChange, 50.0)
+        guard let grocTrend = trends.categoryTrends.first(where: { $0.categoryId == catA.id }) else {
+            XCTFail("Missing grocTrend")
+            return
+        }
+        XCTAssertEqual(grocTrend.deltaMinor, 10000)
+        XCTAssertEqual(grocTrend.direction, .increased)
+        XCTAssertEqual(grocTrend.percentageChange, 50.0)
         
         // Dining: 15000 vs 40000 -> -25000 (-62.5%)
-        let dinTrend = trends.categoryTrends.first { $0.categoryId == catB.id }
-        XCTAssertNotNil(dinTrend)
-        XCTAssertEqual(dinTrend?.deltaMinor, -25000)
-        XCTAssertEqual(dinTrend?.direction, .decreased)
-        XCTAssertEqual(dinTrend?.percentageChange, -62.5)
+        guard let dinTrend = trends.categoryTrends.first(where: { $0.categoryId == catB.id }) else {
+            XCTFail("Missing dinTrend")
+            return
+        }
+        XCTAssertEqual(dinTrend.deltaMinor, -25000)
+        XCTAssertEqual(dinTrend.direction, .decreased)
+        XCTAssertEqual(dinTrend.percentageChange, -62.5)
         
         // Travel: 5000 vs 0 -> +5000 (newSpend)
-        let travTrend = trends.categoryTrends.first { $0.categoryId == catC.id }
-        XCTAssertNotNil(travTrend)
-        XCTAssertEqual(travTrend?.deltaMinor, 5000)
-        XCTAssertEqual(travTrend?.direction, .newSpend)
-        XCTAssertNil(travTrend?.percentageChange)
+        guard let travTrend = trends.categoryTrends.first(where: { $0.categoryId == catC.id }) else {
+            XCTFail("Missing travTrend")
+            return
+        }
+        XCTAssertEqual(travTrend.deltaMinor, 5000)
+        XCTAssertEqual(travTrend.direction, .newSpend)
+        XCTAssertNil(travTrend.percentageChange)
     }
     
     func testTransfersAndDeletedAreExcluded() {
         let currency = CurrencyCode.inr
         let currentMonth = CalendarMonth(year: 2026, month: 10)
         
-        let cat = Category(name: "General", iconName: "tag", colorHex: "#8E8E93", type: .expense)
+        let cat = Category(name: "General", iconKey: "tag")
         
         var deletedTx = Transaction(type: .expense, amountMinor: 10000, currencyCode: "INR", categoryId: cat.id, transactionDay: "2026-10-01")
         deletedTx.deletedAt = Date()
