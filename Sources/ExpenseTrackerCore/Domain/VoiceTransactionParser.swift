@@ -193,8 +193,10 @@ public enum VoiceTransactionParser {
             var minorStr = String(parts[1])
             if minorStr.count > exponent {
                 minorStr = String(minorStr.prefix(exponent))
-            } else while minorStr.count < exponent {
-                minorStr.append("0")
+            } else {
+                while minorStr.count < exponent {
+                    minorStr.append("0")
+                }
             }
             guard let minor = Int64(minorStr) else { return nil }
             return major * multiplier + minor

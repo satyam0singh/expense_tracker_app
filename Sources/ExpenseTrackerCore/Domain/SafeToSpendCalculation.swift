@@ -72,6 +72,22 @@ public struct SafeToSpendCalculation: Equatable, Sendable {
         self.assumptionsText = "Planning forecast: Starting \(basis.displayName.lowercased()) of \(startingFormatted) minus \(postedFormatted) posted spending and \(upcomingFormatted) in upcoming scheduled bills through \(payCycle.endDateString). Not a bank balance."
     }
     
+    public var safeToSpendTodayMinor: Int64 {
+        return dailyPaceMinor
+    }
+    
+    public var safeToSpendToday: Money {
+        return Money(amountMinor: dailyPaceMinor, currency: currency)
+    }
+    
+    public var daysRemainingInCycle: Int {
+        return daysRemaining
+    }
+    
+    public var calculationBasisNote: String {
+        return assumptionsText
+    }
+    
     /// Deterministically computes Safe-to-Spend for a given pay cycle, transactions, and scheduled rules.
     public static func compute(
         payCycle: PayCycle,

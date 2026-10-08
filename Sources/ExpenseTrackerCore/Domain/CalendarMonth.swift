@@ -24,6 +24,10 @@ public struct CalendarMonth: Hashable, Equatable, Comparable, Sendable, Codable,
         return String(format: "%04d-%02d", year, month)
     }
     
+    public var yearMonthString: String {
+        return id
+    }
+    
     public var description: String {
         return id
     }

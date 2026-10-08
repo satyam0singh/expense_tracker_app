@@ -25,10 +25,6 @@ public actor LocalFileStore {
         decoder.dateDecodingStrategy = .iso8601
         self.jsonDecoder = decoder
         
-        createDirectoryIfNeeded()
-    }
-    
-    private func createDirectoryIfNeeded() {
         if !fileManager.fileExists(atPath: baseDirectory.path) {
             try? fileManager.createDirectory(at: baseDirectory, withIntermediateDirectories: true, attributes: nil)
         }
