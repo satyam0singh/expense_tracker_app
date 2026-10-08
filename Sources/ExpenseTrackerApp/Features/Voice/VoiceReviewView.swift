@@ -51,7 +51,7 @@ public struct VoiceReviewView: View {
             if exp == 0 {
                 _amountString = State(initialValue: "\(draft.amountMinor)")
             } else {
-                let div = Int64(pow10(exp))
+                let div = Int64(CurrencyFormatter.powerOfTen(exp))
                 let major = draft.amountMinor / div
                 let minor = draft.amountMinor % div
                 if minor == 0 {
@@ -250,17 +250,19 @@ public struct VoiceReviewView: View {
         let parts = clean.split(separator: ".")
         if parts.count == 1 {
             guard let major = Int64(parts[0]) else { return nil }
-            return major * Int64(pow10(exponent))
+            return major * Int64(CurrencyFormatter.powerOfTen(exponent))
         } else if parts.count == 2 {
             guard let major = Int64(parts[0]) else { return nil }
             var minorPart = String(parts[1])
             if minorPart.count > exponent {
                 minorPart = String(minorPart.prefix(exponent))
-            } else while minorPart.count < exponent {
-                minorPart.append("0")
+            } else {
+                while minorPart.count < exponent {
+                    minorPart.append("0")
+                }
             }
             guard let minor = Int64(minorPart) else { return nil }
-            return major * Int64(pow10(exponent)) + minor
+            return major * Int64(CurrencyFormatter.powerOfTen(exponent)) + minor
         }
         return nil
     }
@@ -279,13 +281,5 @@ public struct VoiceReviewView: View {
         formatter.locale = Locale(identifier: "en_US_POSIX")
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter.date(from: string)
-    }
-    
-    private static func pow10(_ n: Int) -> Int {
-        var res = 1
-        for _ in 0..<n {
-            res *= 10
-        }
-        return res
     }
 }

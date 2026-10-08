@@ -185,7 +185,7 @@ public enum VoiceTransactionParser {
     private static func parseDecimalStringToMinor(_ text: String, exponent: Int) -> Int64? {
         let parts = text.split(separator: ".")
         guard let major = Int64(parts[0]) else { return nil }
-        let multiplier = Int64(pow10(exponent))
+        let multiplier = Int64(CurrencyFormatter.powerOfTen(exponent))
         
         if parts.count == 1 {
             return major * multiplier
@@ -259,13 +259,5 @@ public enum VoiceTransactionParser {
         let m = components.month ?? 10
         let d = components.day ?? 1
         return String(format: "%04d-%02d-%02d", y, m, d)
-    }
-    
-    private static func pow10(_ n: Int) -> Int {
-        var res = 1
-        for _ in 0..<n {
-            res *= 10
-        }
-        return res
     }
 }
