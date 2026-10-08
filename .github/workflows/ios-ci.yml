@@ -31,6 +31,7 @@ jobs:
           xcodebuild test \
             -project ExpenseTracker.xcodeproj \
             -scheme ExpenseTracker \
-            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+            -destination 'platform=iOS Simulator,name=iPhone 15' \
             -derivedDataPath ./build/DerivedData \
-            CODE_SIGNING_ALLOWED=NO
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO
