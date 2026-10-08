@@ -93,8 +93,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		110000012C00000100000001 /* ExpenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		110000022C00000100000001 /* ExpenseTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB0000002C00000100000001 /* ExpenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB0000002C00000100000002 /* ExpenseTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB0000012C00000100000001 /* ExpenseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTrackerApp.swift; sourceTree = "<group>"; };
 		BB0000022C00000100000001 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
 		BB0000032C00000100000001 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -316,8 +316,8 @@
 		DD0000032C00000100000001 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				110000012C00000100000001 /* ExpenseTracker.app */,
-				110000022C00000100000001 /* ExpenseTrackerTests.xctest */,
+				BB0000002C00000100000001 /* ExpenseTracker.app */,
+				BB0000002C00000100000002 /* ExpenseTrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -338,7 +338,7 @@
 			);
 			name = ExpenseTracker;
 			productName = ExpenseTracker;
-			productReference = 110000012C00000100000001 /* ExpenseTracker.app */;
+			productReference = BB0000002C00000100000001 /* ExpenseTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 		110000022C00000100000001 /* ExpenseTrackerTests */ = {
@@ -355,7 +355,7 @@
 			);
 			name = ExpenseTrackerTests;
 			productName = ExpenseTrackerTests;
-			productReference = 110000022C00000100000001 /* ExpenseTrackerTests.xctest */;
+			productReference = BB0000002C00000100000002 /* ExpenseTrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
