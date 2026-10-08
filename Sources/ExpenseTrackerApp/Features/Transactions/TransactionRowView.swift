@@ -1,5 +1,7 @@
 import SwiftUI
+#if canImport(ExpenseTrackerCore)
 import ExpenseTrackerCore
+#endif
 
 public struct TransactionRowView: View {
     public let transaction: Transaction

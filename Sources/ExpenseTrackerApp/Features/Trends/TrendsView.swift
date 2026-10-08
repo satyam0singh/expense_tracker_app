@@ -1,5 +1,7 @@
 import SwiftUI
+#if canImport(ExpenseTrackerCore)
 import ExpenseTrackerCore
+#endif
 
 public struct TrendsView: View {
     private let transactionRepository: TransactionRepositoryProtocol

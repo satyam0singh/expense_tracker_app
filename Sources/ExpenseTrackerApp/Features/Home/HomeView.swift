@@ -1,5 +1,7 @@
 import SwiftUI
+#if canImport(ExpenseTrackerCore)
 import ExpenseTrackerCore
+#endif
 
 public struct HomeView: View {
     public let userProfile: UserProfile

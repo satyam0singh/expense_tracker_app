@@ -1,5 +1,7 @@
 import SwiftUI
+#if canImport(ExpenseTrackerCore)
 import ExpenseTrackerCore
+#endif
 
 @main
 struct ExpenseTrackerApp: App {

@@ -1,5 +1,7 @@
 import SwiftUI
+#if canImport(ExpenseTrackerCore)
 import ExpenseTrackerCore
+#endif
 
 public struct SafeToSpendCard: View {
     public let calculation: SafeToSpendCalculation

@@ -1,5 +1,7 @@
 import SwiftUI
+#if canImport(ExpenseTrackerCore)
 import ExpenseTrackerCore
+#endif
 
 /// Small Home Screen Widget View
 public struct SmallBudgetWidgetView: View {

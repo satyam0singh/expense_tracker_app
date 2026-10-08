@@ -1,5 +1,9 @@
 import XCTest
+#if canImport(ExpenseTrackerCore)
 @testable import ExpenseTrackerCore
+#elseif canImport(ExpenseTracker)
+@testable import ExpenseTracker
+#endif
 
 final class CalendarMonthTests: XCTestCase {
     
