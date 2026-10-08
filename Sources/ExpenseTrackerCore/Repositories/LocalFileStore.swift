@@ -9,12 +9,14 @@ public actor LocalFileStore {
     private let jsonDecoder: JSONDecoder
     
     public init(baseDirectory: URL? = nil) {
+        let directory: URL
         if let dir = baseDirectory {
-            self.baseDirectory = dir
+            directory = dir
         } else {
-            let appSupport = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
-            self.baseDirectory = appSupport.appendingPathComponent("ExpenseTracker", isDirectory: true)
+            let appSupport = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
+            directory = appSupport.appendingPathComponent("ExpenseTracker", isDirectory: true)
         }
+        self.baseDirectory = directory
         
         let encoder = JSONEncoder()
         encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
@@ -25,12 +27,18 @@ public actor LocalFileStore {
         decoder.dateDecodingStrategy = .iso8601
         self.jsonDecoder = decoder
         
-        if !fileManager.fileExists(atPath: baseDirectory.path) {
-            try? fileManager.createDirectory(at: baseDirectory, withIntermediateDirectories: true, attributes: nil)
+        if !FileManager.default.fileExists(atPath: directory.path) {
+            try? FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true, attributes: nil)
         }
     }
     
     // MARK: - Generic Persistence Helpers
+    
+    private func ensureDirectoryExists() {
+        if !fileManager.fileExists(atPath: baseDirectory.path) {
+            try? fileManager.createDirectory(at: baseDirectory, withIntermediateDirectories: true, attributes: nil)
+        }
+    }
     
     public func load<T: Decodable>(_ type: T.Type, filename: String) throws -> T? {
         let fileURL = baseDirectory.appendingPathComponent(filename)
@@ -42,7 +50,7 @@ public actor LocalFileStore {
     }
     
     public func save<T: Encodable>(_ object: T, filename: String) throws {
-        createDirectoryIfNeeded()
+        ensureDirectoryExists()
         let fileURL = baseDirectory.appendingPathComponent(filename)
         let data = try jsonEncoder.encode(object)
         try data.write(to: fileURL, options: [.atomic])

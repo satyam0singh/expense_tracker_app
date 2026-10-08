@@ -28,10 +28,23 @@ jobs:
 
       - name: Run iOS Simulator Test Suite
         run: |
-          xcodebuild test \
-            -project ExpenseTracker.xcodeproj \
-            -scheme ExpenseTracker \
-            -destination 'platform=iOS Simulator,name=iPhone 15' \
-            -derivedDataPath ./build/DerivedData \
-            CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO
+          DEVICE_ID=$(xcrun simctl list devices available -j | jq -r '.devices | to_entries[] | select(.key | contains("iOS")) | .value[] | select(.name | contains("iPhone")) | .udid' | head -n 1)
+          if [ -n "$DEVICE_ID" ]; then
+            echo "Testing on iOS Simulator ID: $DEVICE_ID"
+            xcodebuild test \
+              -project ExpenseTracker.xcodeproj \
+              -scheme ExpenseTracker \
+              -destination "id=$DEVICE_ID" \
+              -derivedDataPath ./build/DerivedData \
+              CODE_SIGNING_ALLOWED=NO \
+              CODE_SIGNING_REQUIRED=NO
+          else
+            echo "Falling back to default iPhone 15 simulator"
+            xcodebuild test \
+              -project ExpenseTracker.xcodeproj \
+              -scheme ExpenseTracker \
+              -destination 'platform=iOS Simulator,name=iPhone 15' \
+              -derivedDataPath ./build/DerivedData \
+              CODE_SIGNING_ALLOWED=NO \
+              CODE_SIGNING_REQUIRED=NO
+          fi

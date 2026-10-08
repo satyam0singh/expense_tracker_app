@@ -64,9 +64,32 @@ public struct CalendarMonth: Hashable, Equatable, Comparable, Sendable, Codable,
         }
     }
     
+    /// Initializes CalendarMonth from a YYYY-MM or YYYY-MM-DD string.
+    public init?(dateString: String) {
+        let parts = dateString.split(separator: "-")
+        guard parts.count >= 2,
+              let y = Int(parts[0]),
+              let m = Int(parts[1]),
+              m >= 1 && m <= 12 else {
+            return nil
+        }
+        self.year = y
+        self.month = m
+    }
+    
     /// Canonical start date string in YYYY-MM-DD format (inclusive).
     public var startDateString: String {
         return String(format: "%04d-%02d-01", year, month)
+    }
+    
+    /// Date instance for the 1st of the month.
+    public var startDate: Date {
+        var calendar = Calendar(identifier: .gregorian)
+        var components = DateComponents()
+        components.year = year
+        components.month = month
+        components.day = 1
+        return calendar.date(from: components) ?? Date()
     }
     
     /// Canonical end date string in YYYY-MM-DD format (inclusive).
