@@ -1,0 +1,690 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA0000012C00000100000001 /* ExpenseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000012C00000100000001 /* ExpenseTrackerApp.swift */; };
+		AA0000022C00000100000001 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000022C00000100000001 /* RootTabView.swift */; };
+		AA0000032C00000100000001 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000032C00000100000001 /* HomeView.swift */; };
+		AA0000042C00000100000001 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000042C00000100000001 /* ActivityView.swift */; };
+		AA0000052C00000100000001 /* BudgetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000052C00000100000001 /* BudgetsView.swift */; };
+		AA0000062C00000100000001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000062C00000100000001 /* SettingsView.swift */; };
+		AA0000072C00000100000001 /* CurrencyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000072C00000100000001 /* CurrencyCode.swift */; };
+		AA0000082C00000100000001 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000082C00000100000001 /* Money.swift */; };
+		AA0000092C00000100000001 /* TransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000092C00000100000001 /* TransactionType.swift */; };
+		AA00000A2C00000100000001 /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000A2C00000100000001 /* PaymentMethod.swift */; };
+		AA00000B2C00000100000001 /* CalendarMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000B2C00000100000001 /* CalendarMonth.swift */; };
+		AA00000C2C00000100000001 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000C2C00000100000001 /* Category.swift */; };
+		AA00000D2C00000100000001 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000D2C00000100000001 /* Transaction.swift */; };
+		AA00000E2C00000100000001 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000E2C00000100000001 /* Budget.swift */; };
+		AA00000F2C00000100000001 /* ValidationErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000F2C00000100000001 /* ValidationErrors.swift */; };
+		AA0000102C00000100000001 /* TransactionDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000102C00000100000001 /* TransactionDraft.swift */; };
+		AA0000112C00000100000001 /* BudgetSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000112C00000100000001 /* BudgetSummary.swift */; };
+		AA0000122C00000100000001 /* RepositoryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000122C00000100000001 /* RepositoryProtocols.swift */; };
+		AA0000132C00000100000001 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000132C00000100000001 /* CurrencyFormatter.swift */; };
+		AA0000142C00000100000001 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000142C00000100000001 /* UserProfile.swift */; };
+		AA0000152C00000100000001 /* UserProfileRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000152C00000100000001 /* UserProfileRepositoryProtocol.swift */; };
+		AA0000162C00000100000001 /* LocalFileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000162C00000100000001 /* LocalFileStore.swift */; };
+		AA0000172C00000100000001 /* LocalRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000172C00000100000001 /* LocalRepositories.swift */; };
+		AA0000182C00000100000001 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000182C00000100000001 /* OnboardingView.swift */; };
+		AA0000192C00000100000001 /* TransactionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000192C00000100000001 /* TransactionRowView.swift */; };
+		AA00001A2C00000100000001 /* AddEditTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00001A2C00000100000001 /* AddEditTransactionView.swift */; };
+		AA00001B2C00000100000001 /* CategorySpendSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00001B2C00000100000001 /* CategorySpendSummary.swift */; };
+		AA00001C2C00000100000001 /* BudgetProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00001C2C00000100000001 /* BudgetProgressBar.swift */; };
+		AA00001D2C00000100000001 /* SetBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00001D2C00000100000001 /* SetBudgetView.swift */; };
+		AA00001E2C00000100000001 /* VoiceTransactionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00001E2C00000100000001 /* VoiceTransactionParser.swift */; };
+		AA00001F2C00000100000001 /* SpeechRecognitionServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00001F2C00000100000001 /* SpeechRecognitionServiceProtocol.swift */; };
+		AA0000202C00000100000001 /* VoiceCaptureSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000202C00000100000001 /* VoiceCaptureSheet.swift */; };
+		AA0000282C00000100000001 /* VoiceReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000282C00000100000001 /* VoiceReviewView.swift */; };
+		AA0000212C00000100000001 /* MoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000212C00000100000001 /* MoneyTests.swift */; };
+		AA0000222C00000100000001 /* TransactionValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000222C00000100000001 /* TransactionValidationTests.swift */; };
+		AA0000232C00000100000001 /* CalendarMonthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000232C00000100000001 /* CalendarMonthTests.swift */; };
+		AA0000242C00000100000001 /* BudgetCalculationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000242C00000100000001 /* BudgetCalculationTests.swift */; };
+		AA0000252C00000100000001 /* PersistenceAndOnboardingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000252C00000100000001 /* PersistenceAndOnboardingTests.swift */; };
+		AA0000262C00000100000001 /* ActivityAndTransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000262C00000100000001 /* ActivityAndTransactionTests.swift */; };
+		AA0000272C00000100000001 /* BudgetFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000272C00000100000001 /* BudgetFeatureTests.swift */; };
+		AA0000292C00000100000001 /* VoiceParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000292C00000100000001 /* VoiceParserTests.swift */; };
+		AA0000302C00000100000001 /* CSVExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000302C00000100000001 /* CSVExporter.swift */; };
+		AA0000312C00000100000001 /* ExportDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000312C00000100000001 /* ExportDataView.swift */; };
+		AA0000322C00000100000001 /* DataExportAndDeleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000322C00000100000001 /* DataExportAndDeleteTests.swift */; };
+		AA0000332C00000100000001 /* CSVExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000302C00000100000001 /* CSVExporter.swift */; };
+		AA0000342C00000100000001 /* RecurringRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000342C00000100000001 /* RecurringRule.swift */; };
+		AA0000352C00000100000001 /* AddEditRecurringRuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000352C00000100000001 /* AddEditRecurringRuleView.swift */; };
+		AA0000362C00000100000001 /* RecurringRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000362C00000100000001 /* RecurringRulesView.swift */; };
+		AA0000372C00000100000001 /* RecurringRulesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000372C00000100000001 /* RecurringRulesTests.swift */; };
+		AA0000382C00000100000001 /* RecurringRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000342C00000100000001 /* RecurringRule.swift */; };
+		AA0000392C00000100000001 /* TrendsSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000392C00000100000001 /* TrendsSummary.swift */; };
+		AA00003A2C00000100000001 /* TrendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00003A2C00000100000001 /* TrendsView.swift */; };
+		AA00003B2C00000100000001 /* TrendsCalculationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00003B2C00000100000001 /* TrendsCalculationTests.swift */; };
+		AA00003C2C00000100000001 /* TrendsSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000392C00000100000001 /* TrendsSummary.swift */; };
+		AA00003D2C00000100000001 /* PayCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00003D2C00000100000001 /* PayCycle.swift */; };
+		AA00003E2C00000100000001 /* SafeToSpendCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00003E2C00000100000001 /* SafeToSpendCalculation.swift */; };
+		AA00003F2C00000100000001 /* SafeToSpendCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00003F2C00000100000001 /* SafeToSpendCard.swift */; };
+		AA0000402C00000100000001 /* PayCycleAndSafeToSpendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000402C00000100000001 /* PayCycleAndSafeToSpendTests.swift */; };
+		AA0000412C00000100000001 /* PayCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00003D2C00000100000001 /* PayCycle.swift */; };
+		AA0000422C00000100000001 /* SafeToSpendCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00003E2C00000100000001 /* SafeToSpendCalculation.swift */; };
+		AA0000432C00000100000001 /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000432C00000100000001 /* WidgetSnapshot.swift */; };
+		AA0000442C00000100000001 /* WidgetSnapshotGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000442C00000100000001 /* WidgetSnapshotGenerator.swift */; };
+		AA0000452C00000100000001 /* LogExpenseIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000452C00000100000001 /* LogExpenseIntentHandler.swift */; };
+		AA0000462C00000100000001 /* WidgetDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000462C00000100000001 /* WidgetDataStore.swift */; };
+		AA0000472C00000100000001 /* ExpenseWidgetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000472C00000100000001 /* ExpenseWidgetViews.swift */; };
+		AA0000482C00000100000001 /* ExpenseWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000482C00000100000001 /* ExpenseWidget.swift */; };
+		AA0000492C00000100000001 /* ExpenseAppIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000492C00000100000001 /* ExpenseAppIntents.swift */; };
+		AA00004A2C00000100000001 /* WidgetSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00004A2C00000100000001 /* WidgetSnapshotTests.swift */; };
+		AA00004B2C00000100000001 /* LogExpenseIntentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00004B2C00000100000001 /* LogExpenseIntentTests.swift */; };
+		AA00004C2C00000100000001 /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000432C00000100000001 /* WidgetSnapshot.swift */; };
+		AA00004D2C00000100000001 /* WidgetSnapshotGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000442C00000100000001 /* WidgetSnapshotGenerator.swift */; };
+		AA00004E2C00000100000001 /* LogExpenseIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000452C00000100000001 /* LogExpenseIntentHandler.swift */; };
+		AA00004F2C00000100000001 /* WidgetDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000462C00000100000001 /* WidgetDataStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC0000012C00000100000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000012C00000100000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 110000012C00000100000001;
+			remoteInfo = ExpenseTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		110000012C00000100000001 /* ExpenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		110000022C00000100000001 /* ExpenseTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB0000012C00000100000001 /* ExpenseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTrackerApp.swift; sourceTree = "<group>"; };
+		BB0000022C00000100000001 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		BB0000032C00000100000001 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BB0000042C00000100000001 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		BB0000052C00000100000001 /* BudgetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsView.swift; sourceTree = "<group>"; };
+		BB0000062C00000100000001 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BB0000072C00000100000001 /* CurrencyCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCode.swift; sourceTree = "<group>"; };
+		BB0000082C00000100000001 /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
+		BB0000092C00000100000001 /* TransactionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionType.swift; sourceTree = "<group>"; };
+		BB00000A2C00000100000001 /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
+		BB00000B2C00000100000001 /* CalendarMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMonth.swift; sourceTree = "<group>"; };
+		BB00000C2C00000100000001 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		BB00000D2C00000100000001 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		BB00000E2C00000100000001 /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		BB00000F2C00000100000001 /* ValidationErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationErrors.swift; sourceTree = "<group>"; };
+		BB0000102C00000100000001 /* TransactionDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDraft.swift; sourceTree = "<group>"; };
+		BB0000112C00000100000001 /* BudgetSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetSummary.swift; sourceTree = "<group>"; };
+		BB0000122C00000100000001 /* RepositoryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocols.swift; sourceTree = "<group>"; };
+		BB0000132C00000100000001 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		BB0000142C00000100000001 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		BB0000152C00000100000001 /* UserProfileRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileRepositoryProtocol.swift; sourceTree = "<group>"; };
+		BB0000162C00000100000001 /* LocalFileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileStore.swift; sourceTree = "<group>"; };
+		BB0000172C00000100000001 /* LocalRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepositories.swift; sourceTree = "<group>"; };
+		BB0000182C00000100000001 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		BB0000192C00000100000001 /* TransactionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRowView.swift; sourceTree = "<group>"; };
+		BB00001A2C00000100000001 /* AddEditTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditTransactionView.swift; sourceTree = "<group>"; };
+		BB00001B2C00000100000001 /* CategorySpendSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySpendSummary.swift; sourceTree = "<group>"; };
+		BB00001C2C00000100000001 /* BudgetProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetProgressBar.swift; sourceTree = "<group>"; };
+		BB00001D2C00000100000001 /* SetBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBudgetView.swift; sourceTree = "<group>"; };
+		BB00001E2C00000100000001 /* VoiceTransactionParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTransactionParser.swift; sourceTree = "<group>"; };
+		BB00001F2C00000100000001 /* SpeechRecognitionServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionServiceProtocol.swift; sourceTree = "<group>"; };
+		BB0000202C00000100000001 /* VoiceCaptureSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceCaptureSheet.swift; sourceTree = "<group>"; };
+		BB0000282C00000100000001 /* VoiceReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceReviewView.swift; sourceTree = "<group>"; };
+		BB0000212C00000100000001 /* MoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTests.swift; sourceTree = "<group>"; };
+		BB0000222C00000100000001 /* TransactionValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionValidationTests.swift; sourceTree = "<group>"; };
+		BB0000232C00000100000001 /* CalendarMonthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMonthTests.swift; sourceTree = "<group>"; };
+		BB0000242C00000100000001 /* BudgetCalculationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCalculationTests.swift; sourceTree = "<group>"; };
+		BB0000252C00000100000001 /* PersistenceAndOnboardingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceAndOnboardingTests.swift; sourceTree = "<group>"; };
+		BB0000262C00000100000001 /* ActivityAndTransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityAndTransactionTests.swift; sourceTree = "<group>"; };
+		BB0000272C00000100000001 /* BudgetFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetFeatureTests.swift; sourceTree = "<group>"; };
+		BB0000292C00000100000001 /* VoiceParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceParserTests.swift; sourceTree = "<group>"; };
+		BB0000302C00000100000001 /* CSVExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVExporter.swift; sourceTree = "<group>"; };
+		BB0000312C00000100000001 /* ExportDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportDataView.swift; sourceTree = "<group>"; };
+		BB0000322C00000100000001 /* DataExportAndDeleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExportAndDeleteTests.swift; sourceTree = "<group>"; };
+		BB0000342C00000100000001 /* RecurringRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurringRule.swift; sourceTree = "<group>"; };
+		BB0000352C00000100000001 /* AddEditRecurringRuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditRecurringRuleView.swift; sourceTree = "<group>"; };
+		BB0000362C00000100000001 /* RecurringRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurringRulesView.swift; sourceTree = "<group>"; };
+		BB0000372C00000100000001 /* RecurringRulesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurringRulesTests.swift; sourceTree = "<group>"; };
+		BB0000392C00000100000001 /* TrendsSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsSummary.swift; sourceTree = "<group>"; };
+		BB00003A2C00000100000001 /* TrendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsView.swift; sourceTree = "<group>"; };
+		BB00003B2C00000100000001 /* TrendsCalculationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsCalculationTests.swift; sourceTree = "<group>"; };
+		BB00003D2C00000100000001 /* PayCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayCycle.swift; sourceTree = "<group>"; };
+		BB00003E2C00000100000001 /* SafeToSpendCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeToSpendCalculation.swift; sourceTree = "<group>"; };
+		BB00003F2C00000100000001 /* SafeToSpendCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeToSpendCard.swift; sourceTree = "<group>"; };
+		BB0000402C00000100000001 /* PayCycleAndSafeToSpendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayCycleAndSafeToSpendTests.swift; sourceTree = "<group>"; };
+		BB0000432C00000100000001 /* WidgetSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSnapshot.swift; sourceTree = "<group>"; };
+		BB0000442C00000100000001 /* WidgetSnapshotGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSnapshotGenerator.swift; sourceTree = "<group>"; };
+		BB0000452C00000100000001 /* LogExpenseIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogExpenseIntentHandler.swift; sourceTree = "<group>"; };
+		BB0000462C00000100000001 /* WidgetDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDataStore.swift; sourceTree = "<group>"; };
+		BB0000472C00000100000001 /* ExpenseWidgetViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widgets/ExpenseWidgetViews.swift; sourceTree = "<group>"; };
+		BB0000482C00000100000001 /* ExpenseWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widgets/ExpenseWidget.swift; sourceTree = "<group>"; };
+		BB0000492C00000100000001 /* ExpenseAppIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intents/ExpenseAppIntents.swift; sourceTree = "<group>"; };
+		BB00004A2C00000100000001 /* WidgetSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSnapshotTests.swift; sourceTree = "<group>"; };
+		BB00004B2C00000100000001 /* LogExpenseIntentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogExpenseIntentTests.swift; sourceTree = "<group>"; };/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		220000012C00000100000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		220000022C00000100000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000000002C00000100000001 = {
+			isa = PBXGroup;
+			children = (
+				DD0000012C00000100000001 /* Sources */,
+				DD0000022C00000100000001 /* Tests */,
+				DD0000032C00000100000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD0000012C00000100000001 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EE0000012C00000100000001 /* App */,
+				EE0000022C00000100000001 /* Core */,
+				EE0000032C00000100000001 /* Features */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		EE0000012C00000100000001 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BB0000012C00000100000001 /* ExpenseTrackerApp.swift */,
+				BB0000022C00000100000001 /* RootTabView.swift */,
+			);
+			path = ExpenseTrackerApp/App;
+			sourceTree = "<group>";
+		};
+		EE0000022C00000100000001 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FF0000012C00000100000001 /* Domain */,
+				FF0000022C00000100000001 /* Repositories */,
+				FF0000032C00000100000001 /* Utilities */,
+			);
+			path = ExpenseTrackerCore;
+			sourceTree = "<group>";
+		};
+		FF0000012C00000100000001 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BB0000072C00000100000001 /* CurrencyCode.swift */,
+				BB0000082C00000100000001 /* Money.swift */,
+				BB0000092C00000100000001 /* TransactionType.swift */,
+				BB00000A2C00000100000001 /* PaymentMethod.swift */,
+				BB00000B2C00000100000001 /* CalendarMonth.swift */,
+				BB00000C2C00000100000001 /* Category.swift */,
+				BB00000D2C00000100000001 /* Transaction.swift */,
+				BB00000E2C00000100000001 /* Budget.swift */,
+				BB00000F2C00000100000001 /* ValidationErrors.swift */,
+				BB0000102C00000100000001 /* TransactionDraft.swift */,
+				BB0000112C00000100000001 /* BudgetSummary.swift */,
+				BB0000142C00000100000001 /* UserProfile.swift */,
+				BB00001B2C00000100000001 /* CategorySpendSummary.swift */,
+				BB00001E2C00000100000001 /* VoiceTransactionParser.swift */,
+				BB00001F2C00000100000001 /* SpeechRecognitionServiceProtocol.swift */,
+				BB0000302C00000100000001 /* CSVExporter.swift */,
+				BB0000342C00000100000001 /* RecurringRule.swift */,
+				BB0000392C00000100000001 /* TrendsSummary.swift */,
+				BB00003D2C00000100000001 /* PayCycle.swift */,
+				BB00003E2C00000100000001 /* SafeToSpendCalculation.swift */,
+				BB0000432C00000100000001 /* WidgetSnapshot.swift */,
+				BB0000442C00000100000001 /* WidgetSnapshotGenerator.swift */,
+				BB0000452C00000100000001 /* LogExpenseIntentHandler.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FF0000022C00000100000001 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				BB0000122C00000100000001 /* RepositoryProtocols.swift */,
+				BB0000152C00000100000001 /* UserProfileRepositoryProtocol.swift */,
+				BB0000162C00000100000001 /* LocalFileStore.swift */,
+				BB0000172C00000100000001 /* LocalRepositories.swift */,
+				BB0000462C00000100000001 /* WidgetDataStore.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		FF0000032C00000100000001 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BB0000132C00000100000001 /* CurrencyFormatter.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EE0000032C00000100000001 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				BB0000032C00000100000001 /* HomeView.swift */,
+				BB0000042C00000100000001 /* ActivityView.swift */,
+				BB0000052C00000100000001 /* BudgetsView.swift */,
+				BB0000062C00000100000001 /* SettingsView.swift */,
+				BB0000182C00000100000001 /* OnboardingView.swift */,
+				BB0000192C00000100000001 /* TransactionRowView.swift */,
+				BB00001A2C00000100000001 /* AddEditTransactionView.swift */,
+				BB00001C2C00000100000001 /* BudgetProgressBar.swift */,
+				BB00001D2C00000100000001 /* SetBudgetView.swift */,
+				BB0000202C00000100000001 /* VoiceCaptureSheet.swift */,
+				BB0000282C00000100000001 /* VoiceReviewView.swift */,
+				BB0000312C00000100000001 /* ExportDataView.swift */,
+				BB0000352C00000100000001 /* AddEditRecurringRuleView.swift */,
+				BB0000362C00000100000001 /* RecurringRulesView.swift */,
+				BB00003A2C00000100000001 /* TrendsView.swift */,
+				BB00003F2C00000100000001 /* SafeToSpendCard.swift */,
+				BB0000472C00000100000001 /* ExpenseWidgetViews.swift */,
+				BB0000482C00000100000001 /* ExpenseWidget.swift */,
+				BB0000492C00000100000001 /* ExpenseAppIntents.swift */,
+			);
+			path = ExpenseTrackerApp/Features;
+			sourceTree = "<group>";
+		};
+		DD0000022C00000100000001 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BB0000212C00000100000001 /* MoneyTests.swift */,
+				BB0000222C00000100000001 /* TransactionValidationTests.swift */,
+				BB0000232C00000100000001 /* CalendarMonthTests.swift */,
+				BB0000242C00000100000001 /* BudgetCalculationTests.swift */,
+				BB0000252C00000100000001 /* PersistenceAndOnboardingTests.swift */,
+				BB0000262C00000100000001 /* ActivityAndTransactionTests.swift */,
+				BB0000272C00000100000001 /* BudgetFeatureTests.swift */,
+				BB0000292C00000100000001 /* VoiceParserTests.swift */,
+				BB0000322C00000100000001 /* DataExportAndDeleteTests.swift */,
+				BB0000372C00000100000001 /* RecurringRulesTests.swift */,
+				BB00003B2C00000100000001 /* TrendsCalculationTests.swift */,
+				BB0000402C00000100000001 /* PayCycleAndSafeToSpendTests.swift */,
+				BB00004A2C00000100000001 /* WidgetSnapshotTests.swift */,
+				BB00004B2C00000100000001 /* LogExpenseIntentTests.swift */,
+			);
+			path = Tests/ExpenseTrackerTests;
+			sourceTree = "<group>";
+		};
+		DD0000032C00000100000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				110000012C00000100000001 /* ExpenseTracker.app */,
+				110000022C00000100000001 /* ExpenseTrackerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		110000012C00000100000001 /* ExpenseTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 440000012C00000100000001 /* Build configuration list for PBXNativeTarget "ExpenseTracker" */;
+			buildPhases = (
+				330000012C00000100000001 /* Sources */,
+				220000012C00000100000001 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExpenseTracker;
+			productName = ExpenseTracker;
+			productReference = 110000012C00000100000001 /* ExpenseTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		110000022C00000100000001 /* ExpenseTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 440000022C00000100000001 /* Build configuration list for PBXNativeTarget "ExpenseTrackerTests" */;
+			buildPhases = (
+				330000022C00000100000001 /* Sources */,
+				220000022C00000100000001 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				550000012C00000100000001 /* PBXTargetDependency */,
+			);
+			name = ExpenseTrackerTests;
+			productName = ExpenseTrackerTests;
+			productReference = 110000022C00000100000001 /* ExpenseTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000012C00000100000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					110000012C00000100000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					110000022C00000100000001 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 110000012C00000100000001;
+					};
+				};
+			};
+			buildConfigurationList = 440000002C00000100000001 /* Build configuration list for PBXProject "ExpenseTracker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 000000002C00000100000001;
+			productRefGroup = DD0000032C00000100000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				110000012C00000100000001 /* ExpenseTracker */,
+				110000022C00000100000001 /* ExpenseTrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		330000012C00000100000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0000012C00000100000001 /* ExpenseTrackerApp.swift in Sources */,
+				AA0000022C00000100000001 /* RootTabView.swift in Sources */,
+				AA0000032C00000100000001 /* HomeView.swift in Sources */,
+				AA0000042C00000100000001 /* ActivityView.swift in Sources */,
+				AA0000052C00000100000001 /* BudgetsView.swift in Sources */,
+				AA0000062C00000100000001 /* SettingsView.swift in Sources */,
+				AA0000072C00000100000001 /* CurrencyCode.swift in Sources */,
+				AA0000082C00000100000001 /* Money.swift in Sources */,
+				AA0000092C00000100000001 /* TransactionType.swift in Sources */,
+				AA00000A2C00000100000001 /* PaymentMethod.swift in Sources */,
+				AA00000B2C00000100000001 /* CalendarMonth.swift in Sources */,
+				AA00000C2C00000100000001 /* Category.swift in Sources */,
+				AA00000D2C00000100000001 /* Transaction.swift in Sources */,
+				AA00000E2C00000100000001 /* Budget.swift in Sources */,
+				AA00000F2C00000100000001 /* ValidationErrors.swift in Sources */,
+				AA0000102C00000100000001 /* TransactionDraft.swift in Sources */,
+				AA0000112C00000100000001 /* BudgetSummary.swift in Sources */,
+				AA0000122C00000100000001 /* RepositoryProtocols.swift in Sources */,
+				AA0000132C00000100000001 /* CurrencyFormatter.swift in Sources */,
+				AA0000142C00000100000001 /* UserProfile.swift in Sources */,
+				AA0000152C00000100000001 /* UserProfileRepositoryProtocol.swift in Sources */,
+				AA0000162C00000100000001 /* LocalFileStore.swift in Sources */,
+				AA0000172C00000100000001 /* LocalRepositories.swift in Sources */,
+				AA0000182C00000100000001 /* OnboardingView.swift in Sources */,
+				AA0000192C00000100000001 /* TransactionRowView.swift in Sources */,
+				AA00001A2C00000100000001 /* AddEditTransactionView.swift in Sources */,
+				AA00001B2C00000100000001 /* CategorySpendSummary.swift in Sources */,
+				AA00001C2C00000100000001 /* BudgetProgressBar.swift in Sources */,
+				AA00001D2C00000100000001 /* SetBudgetView.swift in Sources */,
+				AA00001E2C00000100000001 /* VoiceTransactionParser.swift in Sources */,
+				AA00001F2C00000100000001 /* SpeechRecognitionServiceProtocol.swift in Sources */,
+				AA0000202C00000100000001 /* VoiceCaptureSheet.swift in Sources */,
+				AA0000282C00000100000001 /* VoiceReviewView.swift in Sources */,
+				AA0000302C00000100000001 /* CSVExporter.swift in Sources */,
+				AA0000312C00000100000001 /* ExportDataView.swift in Sources */,
+				AA0000342C00000100000001 /* RecurringRule.swift in Sources */,
+				AA0000352C00000100000001 /* AddEditRecurringRuleView.swift in Sources */,
+				AA0000362C00000100000001 /* RecurringRulesView.swift in Sources */,
+				AA0000392C00000100000001 /* TrendsSummary.swift in Sources */,
+				AA00003A2C00000100000001 /* TrendsView.swift in Sources */,
+				AA00003D2C00000100000001 /* PayCycle.swift in Sources */,
+				AA00003E2C00000100000001 /* SafeToSpendCalculation.swift in Sources */,
+				AA00003F2C00000100000001 /* SafeToSpendCard.swift in Sources */,
+				AA0000432C00000100000001 /* WidgetSnapshot.swift in Sources */,
+				AA0000442C00000100000001 /* WidgetSnapshotGenerator.swift in Sources */,
+				AA0000452C00000100000001 /* LogExpenseIntentHandler.swift in Sources */,
+				AA0000462C00000100000001 /* WidgetDataStore.swift in Sources */,
+				AA0000472C00000100000001 /* ExpenseWidgetViews.swift in Sources */,
+				AA0000482C00000100000001 /* ExpenseWidget.swift in Sources */,
+				AA0000492C00000100000001 /* ExpenseAppIntents.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		330000022C00000100000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0000072C00000100000001 /* CurrencyCode.swift in Sources */,
+				AA0000082C00000100000001 /* Money.swift in Sources */,
+				AA0000092C00000100000001 /* TransactionType.swift in Sources */,
+				AA00000A2C00000100000001 /* PaymentMethod.swift in Sources */,
+				AA00000B2C00000100000001 /* CalendarMonth.swift in Sources */,
+				AA00000C2C00000100000001 /* Category.swift in Sources */,
+				AA00000D2C00000100000001 /* Transaction.swift in Sources */,
+				AA00000E2C00000100000001 /* Budget.swift in Sources */,
+				AA00000F2C00000100000001 /* ValidationErrors.swift in Sources */,
+				AA0000102C00000100000001 /* TransactionDraft.swift in Sources */,
+				AA0000112C00000100000001 /* BudgetSummary.swift in Sources */,
+				AA0000122C00000100000001 /* RepositoryProtocols.swift in Sources */,
+				AA0000132C00000100000001 /* CurrencyFormatter.swift in Sources */,
+				AA0000142C00000100000001 /* UserProfile.swift in Sources */,
+				AA0000152C00000100000001 /* UserProfileRepositoryProtocol.swift in Sources */,
+				AA0000162C00000100000001 /* LocalFileStore.swift in Sources */,
+				AA0000172C00000100000001 /* LocalRepositories.swift in Sources */,
+				AA00001B2C00000100000001 /* CategorySpendSummary.swift in Sources */,
+				AA00001E2C00000100000001 /* VoiceTransactionParser.swift in Sources */,
+				AA00001F2C00000100000001 /* SpeechRecognitionServiceProtocol.swift in Sources */,
+				AA0000212C00000100000001 /* MoneyTests.swift in Sources */,
+				AA0000222C00000100000001 /* TransactionValidationTests.swift in Sources */,
+				AA0000232C00000100000001 /* CalendarMonthTests.swift in Sources */,
+				AA0000242C00000100000001 /* BudgetCalculationTests.swift in Sources */,
+				AA0000252C00000100000001 /* PersistenceAndOnboardingTests.swift in Sources */,
+				AA0000262C00000100000001 /* ActivityAndTransactionTests.swift in Sources */,
+				AA0000272C00000100000001 /* BudgetFeatureTests.swift in Sources */,
+				AA0000292C00000100000001 /* VoiceParserTests.swift in Sources */,
+				AA0000332C00000100000001 /* CSVExporter.swift in Sources */,
+				AA0000322C00000100000001 /* DataExportAndDeleteTests.swift in Sources */,
+				AA0000382C00000100000001 /* RecurringRule.swift in Sources */,
+				AA0000372C00000100000001 /* RecurringRulesTests.swift in Sources */,
+				AA00003C2C00000100000001 /* TrendsSummary.swift in Sources */,
+				AA00003B2C00000100000001 /* TrendsCalculationTests.swift in Sources */,
+				AA0000412C00000100000001 /* PayCycle.swift in Sources */,
+				AA0000422C00000100000001 /* SafeToSpendCalculation.swift in Sources */,
+				AA0000402C00000100000001 /* PayCycleAndSafeToSpendTests.swift in Sources */,
+				AA00004C2C00000100000001 /* WidgetSnapshot.swift in Sources */,
+				AA00004D2C00000100000001 /* WidgetSnapshotGenerator.swift in Sources */,
+				AA00004E2C00000100000001 /* LogExpenseIntentHandler.swift in Sources */,
+				AA00004F2C00000100000001 /* WidgetDataStore.swift in Sources */,
+				AA00004A2C00000100000001 /* WidgetSnapshotTests.swift in Sources */,
+				AA00004B2C00000100000001 /* LogExpenseIntentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		550000012C00000100000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 110000012C00000100000001 /* ExpenseTracker */;
+			targetProxy = CC0000012C00000100000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		660000012C00000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		660000022C00000100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		660000032C00000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Expense Tracker";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.provisional.expensetracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		660000042C00000100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Expense Tracker";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.provisional.expensetracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		660000052C00000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.provisional.expensetracker.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExpenseTracker.app/ExpenseTracker";
+			};
+			name = Debug;
+		};
+		660000062C00000100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.provisional.expensetracker.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExpenseTracker.app/ExpenseTracker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		440000002C00000100000001 /* Build configuration list for PBXProject "ExpenseTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				660000012C00000100000001 /* Debug */,
+				660000022C00000100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		440000012C00000100000001 /* Build configuration list for PBXNativeTarget "ExpenseTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				660000032C00000100000001 /* Debug */,
+				660000042C00000100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		440000022C00000100000001 /* Build configuration list for PBXNativeTarget "ExpenseTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				660000052C00000100000001 /* Debug */,
+				660000062C00000100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 000000012C00000100000001 /* Project object */;
+}
