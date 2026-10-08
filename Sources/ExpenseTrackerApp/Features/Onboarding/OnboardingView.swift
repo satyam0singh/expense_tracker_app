@@ -132,7 +132,7 @@ public struct OnboardingView: View {
         isSaving = true
         Task {
             let currency = CurrencyCode.from(code: selectedCurrency)
-            let multiplier = Int64(CurrencyFormatter.pow10(currency.minorUnitExponent))
+            let multiplier = Int64(CurrencyFormatter.powerOfTen(currency.minorUnitExponent))
             
             let incomeMinor = Int64(expectedIncomeMajorString.trimmingCharacters(in: .whitespacesAndNewlines))
                 .flatMap { $0 > 0 ? $0 * multiplier : nil }
@@ -177,16 +177,5 @@ public struct OnboardingView: View {
                 }
             }
         }
-    }
-}
-
-// Internal helper extension
-extension CurrencyFormatter {
-    static func pow10(_ n: Int) -> Int {
-        var res = 1
-        for _ in 0..<n {
-            res *= 10
-        }
-        return res
     }
 }

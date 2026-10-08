@@ -21,7 +21,7 @@ public enum CurrencyFormatter {
             majorUnits = absAmount
             minorUnits = 0
         } else {
-            let divisor = Int64(pow10(exponent))
+            let divisor = Int64(powerOfTen(exponent))
             majorUnits = absAmount / divisor
             minorUnits = absAmount % divisor
         }
@@ -63,7 +63,7 @@ public enum CurrencyFormatter {
         return format(money: money, locale: locale, includeSymbol: includeSymbol)
     }
     
-    private static func pow10(_ n: Int) -> Int {
+    public static func powerOfTen(_ n: Int) -> Int {
         var res = 1
         for _ in 0..<n {
             res *= 10

@@ -332,12 +332,15 @@ public struct HomeView: View {
             )
             try? await WidgetDataStore().saveSnapshot(snapshot)
             
+            let finalDueCount = dueCount
+            let finalSTS = computedSTS
+            
             await MainActor.run {
                 self.transactionsOrRecent(txs)
                 self.categories = cats
                 self.summary = calculated
-                self.dueRecurringCount = dueCount
-                self.safeToSpend = computedSTS
+                self.dueRecurringCount = finalDueCount
+                self.safeToSpend = finalSTS
                 self.isLoading = false
             }
         }

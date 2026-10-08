@@ -10,7 +10,6 @@ final class TrendsCalculationTests: XCTestCase {
     func testMonthOverMonthComparisonTotals() {
         let currency = CurrencyCode.inr
         let currentMonth = CalendarMonth(year: 2026, month: 10)
-        let prevMonth = CalendarMonth(year: 2026, month: 9)
         
         let catFood = Category(name: "Food", iconKey: "fork.knife")
         
