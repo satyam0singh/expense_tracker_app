@@ -23,7 +23,7 @@ public protocol SpeechRecognitionServiceProtocol: Sendable {
 }
 
 /// Lightweight mock service for previews and automated tests.
-public final class MockSpeechRecognitionService: SpeechRecognitionServiceProtocol {
+public final class MockSpeechRecognitionService: SpeechRecognitionServiceProtocol, @unchecked Sendable {
     public let supportsOnDeviceRecognition: Bool
     public var mockTranscript: String
     

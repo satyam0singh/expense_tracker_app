@@ -51,6 +51,18 @@ public enum CurrencyFormatter {
         }
     }
     
+    /// Formats integer minor units and currency code into a display string.
+    public static func format(
+        amountMinor: Int64,
+        currencyCode: String,
+        locale: Locale = Locale(identifier: "en_IN"),
+        includeSymbol: Bool = true
+    ) -> String {
+        let currency = CurrencyCode.from(code: currencyCode)
+        let money = Money(amountMinor: amountMinor, currency: currency)
+        return format(money: money, locale: locale, includeSymbol: includeSymbol)
+    }
+    
     private static func pow10(_ n: Int) -> Int {
         var res = 1
         for _ in 0..<n {
