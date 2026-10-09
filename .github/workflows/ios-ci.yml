@@ -48,3 +48,26 @@ jobs:
               CODE_SIGNING_ALLOWED=NO \
               CODE_SIGNING_REQUIRED=NO
           fi
+
+      - name: Prepare Simulator App for Appetize.io
+        run: |
+          cd ./build/DerivedData/Build/Products/Debug-iphonesimulator
+          # Remove unit test bundle to keep app standalone and lightweight
+          rm -rf ExpenseTracker.app/PlugIns
+          # Create explicit standalone zip
+          zip -r -y ExpenseTracker-Simulator.zip ExpenseTracker.app
+          ls -lh ExpenseTracker-Simulator.zip
+
+      - name: Upload Simulator App (Appetize.io Ready)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ExpenseTracker-Simulator
+          path: ./build/DerivedData/Build/Products/Debug-iphonesimulator/ExpenseTracker.app
+          retention-days: 14
+
+      - name: Upload Standalone Zip
+        uses: actions/upload-artifact@v4
+        with:
+          name: ExpenseTracker-Simulator-Zip
+          path: ./build/DerivedData/Build/Products/Debug-iphonesimulator/ExpenseTracker-Simulator.zip
+          retention-days: 14
