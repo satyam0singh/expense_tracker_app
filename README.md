@@ -7,7 +7,29 @@
 ![Privacy](https://img.shields.io/badge/Privacy-100%25%20Offline-success)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-A native, private, and local-first personal finance and expense tracker built for iOS with **SwiftUI** and **Swift 5.10**. Engineered for financial correctness, transparency, and complete data privacy.
+A native, private, and local-first personal finance and expense tracker built for iOS with **SwiftUI** and **Swift 5.10**. Engineered for financial correctness, transparency, and complete on-device data sovereignty.
+
+---
+
+## 📱 Screenshots & Visual Walkthrough
+
+### 1. Onboarding & Core Tracking
+| 1. Onboarding & Currency | 2. Add Transaction / Income | 3. Live Dashboard |
+| :---: | :---: | :---: |
+| <img src="docs/screenshots/01_onboarding.png" width="260" alt="App Startup & Onboarding" /> | <img src="docs/screenshots/02_add_transaction.png" width="260" alt="Add Transaction" /> | <img src="docs/screenshots/03_dashboard.png" width="260" alt="App Dashboard" /> |
+| *Multi-currency selection & planning limits* | *Expense/income logging with payment methods* | *Factual cash flow, budgets & recent activity* |
+
+### 2. On-Device Voice Logging & Natural Review
+| 4. Speak an Expense | 5. Review Voice Draft |
+| :---: | :---: |
+| <img src="docs/screenshots/06_voice_capture.png" width="260" alt="Voice Adding" /> | <img src="docs/screenshots/07_voice_review.png" width="260" alt="Voice Review Draft" /> |
+| *100% private, on-device voice capture* | *Automatic NLP parsing for category, amount & note* |
+
+### 3. Financial Analysis & Settings
+| 6. Trends & Monthly Rhythm | 7. Settings & Privacy Controls |
+| :---: | :---: |
+| <img src="docs/screenshots/04_trends_analysis.png" width="260" alt="Monthly Trends & Rhythm" /> | <img src="docs/screenshots/05_settings.png" width="260" alt="Settings & Privacy" /> |
+| *Week-by-week spending rhythm & category shifts* | *Pay cycle config, RFC 4180 CSV export & local wipe* |
 
 ---
 
@@ -15,9 +37,9 @@ A native, private, and local-first personal finance and expense tracker built fo
 
 - **🔒 100% Offline & Private:** No third-party servers, no analytics, no bank credential scraping, and zero cloud tracking. Your financial records stay entirely on your device.
 - **🎯 Exact Minor-Unit Money Math:** All amounts and limits are computed in 64-bit integer minor units (`Int64`). Floating-point arithmetic is strictly banned to guarantee zero rounding errors.
-- **🎙️ On-Device Voice Logging:** Speak naturally to log expenses (e.g. *"Paid 150 for chai via UPI yesterday"*). Speech is processed locally, parsed into editable review drafts, and never saved silently or transmitted off-device.
+- **🎙️ On-Device Voice Logging:** Speak naturally to log expenses (e.g. *"Spent 350 rupees on lunch"* or *"₹250 chai, UPI"*). Speech is processed locally, parsed into editable review drafts, and never saved silently or transmitted off-device.
 - **⚡ Safe-to-Spend Engine:** Transparent, factual daily spending pace calculated against your pay cycle and upcoming recurring commitments. Explicitly labeled as a planning forecast—never claims to know your bank balance.
-- **📊 Rich Trends & Budget Management:** Category-level spending progress bars, monthly comparison analytics, and warning thresholds.
+- **📊 Rich Trends & Spending Rhythms:** Category-level spending progress bars, week-by-week cadence analysis, and warning thresholds.
 - **💾 Complete Data Sovereignty:** One-tap export to standardized RFC 4180 CSV, plus a single-button total data wipe.
 
 ---
@@ -33,7 +55,7 @@ You can run and interact with the actual compiled iOS application directly insid
 
 ---
 
-## 📱 Feature Overview
+## 🔍 Feature Architecture & Details
 
 ### 1. Daily Pace & Safe-to-Spend (`SafeToSpendCalculation`)
 - Calculates remaining daily allowance: `(Starting Pool - Posted Spend - Upcoming Commitments) / Days Remaining`.
@@ -75,6 +97,10 @@ expense_tracker_app/
 │
 ├── Tests/
 │   └── ExpenseTrackerTests/         # 14 Test Suites (73 automated unit & integration tests)
+│
+├── docs/
+│   ├── screenshots/                 # App UI screenshots for documentation
+│   └── 00_PRODUCT_BRAIN.md ...      # Complete product, architecture and test specifications
 │
 ├── ExpenseTracker.xcodeproj         # Native Xcode Project (iOS 17.0+ Target)
 └── Package.swift                    # Swift Package Manager manifest
