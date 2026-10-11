@@ -1,13 +1,15 @@
 # Expense Tracker for iOS
 
 [![iOS CI](https://github.com/satyam0singh/expense_tracker_app/actions/workflows/ios-ci.yml/badge.svg)](https://github.com/satyam0singh/expense_tracker_app/actions/workflows/ios-ci.yml)
+![Status](https://img.shields.io/badge/Project%20Status-Complete%20%26%20Production--Ready-success?logo=checkmarx)
 ![iOS](https://img.shields.io/badge/iOS-17.0%2B-blue?logo=apple)
 ![Swift](https://img.shields.io/badge/Swift-5.10-orange?logo=swift)
 ![Tests](https://img.shields.io/badge/Tests-73%20Passing-brightgreen)
 ![Privacy](https://img.shields.io/badge/Privacy-100%25%20Offline-success)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-A native, private, and local-first personal finance and expense tracker built for iOS with **SwiftUI** and **Swift 5.10**. Engineered for financial correctness, transparency, and complete on-device data sovereignty.
+> **🎉 Project Status: COMPLETE & PRODUCTION-READY**  
+> A native, private, and local-first personal finance and expense tracker built for iOS with **SwiftUI** and **Swift 5.10**. Engineered for financial correctness, transparency, and complete on-device data sovereignty. Fully validated across **14 test suites (73 automated unit & integration tests)**.
 
 ---
 
@@ -155,6 +157,20 @@ Every pull request and push to `main` triggers a complete CI validation pipeline
 - **Money Storage:** Strictly integer minor units (`Int64`). Floating-point types are forbidden in financial calculations.
 - **Network & Analytics:** Zero outbound network calls for core tracking. No telemetry, third-party trackers, or crash SDKs that log user transaction details.
 - **Auditability:** Complete specification pack, architecture decision records, and requirements traceability are maintained under [`docs/`](./docs/).
+
+---
+
+## 👨‍💻 Author & Connect
+
+**Satyam Singh**  
+Full-Stack & iOS Software Engineer  
+
+- 🌐 **Portfolio:** [satyamsinghdev.vercel.app](https://satyamsinghdev.vercel.app/)
+- 🐙 **GitHub:** [@satyam0singh](https://github.com/satyam0singh)
+- 💼 **LinkedIn:** [Satyam Singh](https://www.linkedin.com/in/satyam-singh-41b695294)
+- ✉️ **Email:** [satyam8076singh@gmail.com](mailto:satyam8076singh@gmail.com)
+
+Open for collaborations, software engineering roles, and mobile development inquiries.
 
 ---
 
