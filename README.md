@@ -16,22 +16,36 @@
 ## 📱 Screenshots & Visual Walkthrough
 
 ### 1. Onboarding & Core Tracking
-| 1. Onboarding & Currency | 2. Add Transaction / Income | 3. Live Dashboard |
-| :---: | :---: | :---: |
-| <img src="docs/screenshots/01_onboarding.png" width="260" alt="App Startup & Onboarding" /> | <img src="docs/screenshots/02_add_transaction.png" width="260" alt="Add Transaction" /> | <img src="docs/screenshots/03_dashboard.png" width="260" alt="App Dashboard" /> |
-| *Multi-currency selection & planning limits* | *Expense/income logging with payment methods* | *Factual cash flow, budgets & recent activity* |
+<p align="center">
+  <img src="docs/screenshots/01_onboarding.png" width="240" alt="App Startup & Onboarding" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="docs/screenshots/02_add_transaction.png" width="240" alt="Add Transaction" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="docs/screenshots/03_dashboard.png" width="240" alt="App Dashboard" />
+</p>
+<p align="center">
+  <em>Multi-currency selection &bull; Direct transaction logging &bull; Live cash flow & Safe-to-Spend</em>
+</p>
 
 ### 2. On-Device Voice Logging & Natural Review
-| 4. Speak an Expense | 5. Review Voice Draft |
-| :---: | :---: |
-| <img src="docs/screenshots/06_voice_capture.png" width="260" alt="Voice Adding" /> | <img src="docs/screenshots/07_voice_review.png" width="260" alt="Voice Review Draft" /> |
-| *100% private, on-device voice capture* | *Automatic NLP parsing for category, amount & note* |
+<p align="center">
+  <img src="docs/screenshots/06_voice_capture.png" width="240" alt="Voice Adding" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="docs/screenshots/07_voice_review.png" width="240" alt="Voice Review Draft" />
+</p>
+<p align="center">
+  <em>100% private, on-device voice capture &bull; Automatic NLP parsing for category, amount & note</em>
+</p>
 
 ### 3. Financial Analysis & Settings
-| 6. Trends & Monthly Rhythm | 7. Settings & Privacy Controls |
-| :---: | :---: |
-| <img src="docs/screenshots/04_trends_analysis.png" width="260" alt="Monthly Trends & Rhythm" /> | <img src="docs/screenshots/05_settings.png" width="260" alt="Settings & Privacy" /> |
-| *Week-by-week spending rhythm & category shifts* | *Pay cycle config, RFC 4180 CSV export & local wipe* |
+<p align="center">
+  <img src="docs/screenshots/04_trends_analysis.png" width="240" alt="Monthly Trends & Rhythm" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="docs/screenshots/05_settings.png" width="240" alt="Settings & Privacy" />
+</p>
+<p align="center">
+  <em>Week-by-week spending rhythm & category shifts &bull; Pay cycle config, RFC 4180 CSV export & local wipe</em>
+</p>
 
 ---
 
